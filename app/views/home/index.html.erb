@@ -1,0 +1,33 @@
+
+
+<h1> The Ultimate Gossip Project </h1>
+
+
+<ul>
+	<% if  moussaillon_signed_in? %>
+
+	<h2>Tous les gossips</h2>
+	
+
+	<% @gossip.each do |each| %>
+<table>
+	<tr>
+		<td><%= each.moussaillon_id %></td>
+		<td><%= each.content %></td> 
+		<td><%= link_to 'Show', gossip_path(each.id)%><br/><%= link_to 'Edit', edit_gossip_path(each.id)%><br/><%= link_to 'Delete', each, method: :delete %></td>
+	</tr>
+	<% end %>
+	</table>
+	<%= link_to 'Créer un Gossip', new_gossip_path %>
+
+	<% else %>
+
+	<h2>Welcome ! </h2>
+	<p>Register now ! Get on board ! </p>
+	<p>
+		<%= link_to 'Register', new_moussaillon_registration_path, class: 'btn btn-primary btn-lg'  %>
+	</p>
+
+	<% end %>
+</ul>
+

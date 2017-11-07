@@ -1,0 +1,26 @@
+<div class = "navbar">
+	<ul>
+		<% if  moussaillon_signed_in? %>
+		<li>
+			<%= link_to "New gossip", new_gossip_path %>
+		</li>
+
+		<li>
+			<%= link_to "Edit account", edit_moussaillon_registration_path %>	
+		</li>
+
+
+		<li>
+			<%= link_to "Sign out", destroy_moussaillon_session_path, method: :delete %>
+		</li>
+	
+		
+
+		<% else %>
+		<li>
+			<%= link_to "Sign in", new_moussaillon_session_path  %>
+		</li>		
+	
+		<% end %>
+	</ul>
+</div>

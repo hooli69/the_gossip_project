@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar ul {
+ padding:0;
+ margin:0;
+ list-style-type:none;
+ float:right;
+ }
+.navbar li {
+ margin-left:2px;
+ float:left; /*pour IE*/
+ }
+
+.navbar ul li a {
+ display:block;
+ float:left;   
+ width:130px;
+/* color:black;*/
+
+ text-decoration:none;
+
+  padding:2px;
+ }
